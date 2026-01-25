@@ -1,4 +1,4 @@
-# Nick Mallory – Data Analyst & BI Developer
+# Mahlatse Chiloane – Data Analyst & BI Developer
 
 Welcome to my portfolio repository.
 

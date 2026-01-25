@@ -18,7 +18,7 @@ Simulates insurance premium reporting and tiered commission calculations using S
 - Tiered commission logic
 - Financial aggregation and reconciliation
 
-👉 View project: [Insurance Reporting SQL](sql/insurance_reporting)
+👉 View project: [Insurance Reporting SQL](https://github.com/NickMallory/NickMallory.github.io/tree/main/sql)
 
 ---
 

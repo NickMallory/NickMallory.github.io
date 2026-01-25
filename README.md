@@ -22,16 +22,6 @@ Simulates insurance premium reporting and tiered commission calculations using S
 
 ---
 
-### Technician Performance & Workload Reporting
-Operational reporting project focused on technician productivity and job tracking.
-
-- Technician job counts and performance metrics
-- Date-based filtering and aggregation
-- Report-ready SQL output
-
-👉 View project: [Technician Reporting SQL](sql/technician_reporting)
-
----
 
 ## 🌐 Live Portfolio Website
 This repository is published via GitHub Pages:  

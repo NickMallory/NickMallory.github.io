@@ -12,13 +12,24 @@ This site showcases selected projects demonstrating my experience with:
 ## 📊 SQL Projects
 
 ### Insurance Reporting & Commission Calculations
-A SQL Server project simulating real-world insurance reporting scenarios, including:
-- Premium reporting
-- Commission calculations
-- Bordereaux-style insurer outputs
+Simulates insurance premium reporting and tiered commission calculations using SQL Server.
 
-👉 View the project here:  
-[Insurance Reporting SQL Project](sql/insurance_reporting)
+- Bordereaux-style insurer reporting
+- Tiered commission logic
+- Financial aggregation and reconciliation
+
+👉 View project: [Insurance Reporting SQL](sql/insurance_reporting)
+
+---
+
+### Technician Performance & Workload Reporting
+Operational reporting project focused on technician productivity and job tracking.
+
+- Technician job counts and performance metrics
+- Date-based filtering and aggregation
+- Report-ready SQL output
+
+👉 View project: [Technician Reporting SQL](sql/technician_reporting)
 
 ---
 

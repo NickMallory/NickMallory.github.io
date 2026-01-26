@@ -12,46 +12,106 @@ This site showcases selected projects demonstrating my experience with:
 # SQL BI Reporting Portfolio
 
 This repository contains anonymised, production-style SQL Server reporting examples
-demonstrating real-world BI development and financial reporting skills.
+demonstrating real-world BI development, financial reporting, and operational analysis skills.
+
+All data is fictional and created solely for portfolio demonstration purposes.
+
+---
 
 ## 📊 Insurance Reporting
-**Bordereaux & Commission Reports**
+### Bordereaux & Commission Reports
+
+These examples simulate insurer-ready bordereaux and commission reporting, focusing on
+accuracy, reconciliation, and regulatory-style outputs.
+
+**Key Features**
 - Premium, VAT, and commission calculations
 - Agent and management commission rules
 - Reconciliation-focused datasets
-- Insurer-ready reporting structures
+- SSRS-ready query structures
 
-📁 Folder: `sql/insurance_reporting`
+🔗 **Project Folder**  
+https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/insurance_reporting
+
+🔗 **Key SQL Files**
+- Schema  
+  https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/schema.sql
+- Sample Data  
+  https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/sample_data.sql
+- Bordereaux & Commission Query  
+  https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/bordereaux_commission.sql
 
 ---
 
 ## 🛠 Technician Operational Reporting
-**Technician Task & Utilisation Reports**
-- Technician job allocation per day
-- Installation task tracking by location
-- Workload and utilisation analysis
-- SSRS-ready parameterised queries
+### Technician Task Allocation & Utilisation
 
-📁 Folder: `sql/technician_reporting`
+This project demonstrates operational reporting for field technicians, focusing on
+work allocation, scheduling, and utilisation analysis.
+
+**Key Features**
+- Technician task lists filtered by TechnicianID
+- Installation jobs across multiple locations
+- Daily and monthly workload analysis
+- Operational insights for capacity planning
+
+🔗 **Project Folder**  
+https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/technician_reporting
+
+🔗 **Key SQL Files**
+- Schema  
+  https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/schema.sql
+- Sample Data  
+  https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/sample_data.sql
+- Technician Task Report  
+  https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/technician_task_report.sql
 
 ---
 
 ## 💰 Finance & Accounting Reporting
-**Customer Invoices & Statements**
+### Customer Invoices & Statements (VAT Included)
+
+This project simulates financial reporting used by finance and billing teams, including
+VAT calculations and customer balance tracking.
+
+**Key Features**
 - Transaction-level invoice generation
-- VAT calculations (line-level & totals)
+- VAT calculations at line and total level
 - Customer statements with running balances
 - Payment and invoice reconciliation logic
 
-📁 Folder: `sql/finance_reporting`
+🔗 **Project Folder**  
+https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/finance_reporting
 
-Includes:
-- `schema.sql` – Database structure
-- `sample_data.sql` – Anonymised test data
-- `customer_invoice.sql`
-- `customer_statement.sql`
+🔗 **Key SQL Files**
+- Schema  
+  https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/finance_reporting/schema.sql
+- Sample Data  
+  https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/finance_reporting/sample_data.sql
+- Customer Invoice Query  
+  https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/finance_reporting/customer_invoice.sql
+- Customer Statement Query  
+  https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/finance_reporting/customer_statement.sql
 
 ---
+
+## 🧠 Skills Demonstrated Across Projects
+
+- T-SQL (Joins, Aggregations, Window Functions)
+- SSRS-style parameterised queries
+- Financial & VAT reporting logic
+- Operational & utilisation analysis
+- Data validation and reconciliation
+- BI-focused query optimisation
+
+---
+
+📌 **How to Use**
+1. Start with the project folders above
+2. Review `schema.sql` and `sample_data.sql`
+3. Run the report queries to see real-world outputs
+4. Review comments for business logic explanations
+
 
 ## 🧠 Key Skills Demonstrated
 - T-SQL (joins, aggregations, window functions)

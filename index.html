@@ -198,53 +198,70 @@
 </section>
 
 <section id="projects">
-    <h3>BI & SQL Reporting Projects (Anonymised Data)</h3>
+    <h3>BI Development Projects (SQL & Reporting)</h3>
 
     <div class="role-section">
-        <h4>Insurance Bordereaux & Commission Reporting</h4>
+        <h4>1. Insurance Bordereaux & Commission Reporting</h4>
         <p>
-            A SQL Server reporting solution simulating real-world insurance premium and commission reporting,
-            designed to reflect insurer and regulatory-style requirements.
+            SQL Server reporting solution simulating insurer bordereaux submissions and commission calculations.
+            Focused on financial accuracy, reconciliation, and auditability.
         </p>
         <ul>
-            <li>Built premium and policy-level reporting datasets using T-SQL</li>
-            <li>Implemented agent and management commission calculation rules</li>
-            <li>Produced bordereaux-style outputs grouped by insurer and reporting period</li>
-            <li>Ensured reconciliation between premiums written and commissions payable</li>
-        </ul>
-        <p>
-            🔗 <strong>SQL Project:</strong>
-            <a href="https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/insurance_reporting" target="_blank">
-                View Insurance Reporting SQL
-            </a>
-        </p>
-    </div>
-
-    <div class="role-section">
-        <h4>Technician Scheduling & Utilisation Reporting</h4>
-        <p>
-            An operational BI reporting project focused on analysing technician workload, utilisation,
-            and capacity using booking and assignment data.
-        </p>
-        <ul>
-            <li>Analysed technician job allocations and daily workloads</li>
-            <li>Calculated utilisation rates, idle time, and workload distribution</li>
-            <li>Designed datasets suitable for operational SSRS-style reports</li>
-            <li>Highlighted capacity constraints and efficiency gaps for management</li>
+            <li>
+                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/schema.sql" target="_blank">
+                    Database Schema
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/sample_data.sql" target="_blank">
+                    Sample Data
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/bordereaux_commission.sql" target="_blank">
+                    Bordereaux & Commission Query
+                </a>
+            </li>
         </ul>
     </div>
 
     <div class="role-section">
-        <h4>Client Invoice & Statement Reporting</h4>
+        <h4>2. Technician Task Allocation & Utilisation Reporting</h4>
         <p>
-            A financial reporting project simulating client invoices and statements using anonymised
-            transaction data.
+            Operational reporting solution analysing technician workload, task assignments, and service delivery
+            across multiple locations. Designed for SSRS parameter-driven reporting.
         </p>
         <ul>
-            <li>Grouped financial transactions per client and reporting period</li>
-            <li>Implemented balance-forward and reconciliation logic</li>
-            <li>Designed report-ready datasets for billing and financial review</li>
-            <li>Focused on accuracy, traceability, and auditability</li>
+            <li>
+                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/schema.sql" target="_blank">
+                    Database Schema
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/sample_data.sql" target="_blank">
+                    Sample Data
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/technician_task_report.sql" target="_blank">
+                    Technician Task Report Query
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="role-section">
+        <h4>3. Client Invoice & Statement Reporting (VAT Calculations)</h4>
+        <p>
+            Financial reporting queries simulating customer invoicing and statement generation,
+            including VAT calculation, balance forward logic, and reconciliation checks.
+        </p>
+        <ul>
+            <li>
+                <a href="https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/customer_billing" target="_blank">
+                    View Project Files
+                </a>
+            </li>
         </ul>
     </div>
 </section>
@@ -264,7 +281,7 @@
 <section id="contact">
     <h3>Contact</h3>
     <p>
-        I am actively seeking opportunities as a Data Analyst or BI Developer and am available for interviews.
+        I am actively seeking opportunities as a Data Analyst or BI Developer and I am available for interviews.
     </p>
     <p>
         📧 <strong>Email:</strong> mahlatsechiloane7@gmail.com<br>
@@ -279,5 +296,6 @@
 
 </body>
 </html>
+
 
 

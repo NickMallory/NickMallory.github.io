@@ -8,53 +8,24 @@ Notes       : Uses synthetic / anonymised data for portfolio
 ============================================================
 */
 
-DECLARE @TechnicianID INT = 101;  -- SSRS / Power BI parameter
+
+DECLARE @TechnicianID INT = 1;
 
 SELECT
-    t.TaskID,
-    t.TaskReference,
-    tech.TechnicianID,
-    tech.TechnicianName,
-
-    -- Location details
-    loc.LocationName,
-    loc.City,
-    loc.Region,
-
-    -- Unit details
-    u.UnitSerialNumber,
-    u.UnitType,
-
-    -- Task status & dates
-    t.TaskStatus,
-    t.AssignedDate,
-    t.ScheduledInstallDate,
-    t.CompletedDate,
-
-    -- SLA & performance indicators
-    DATEDIFF(DAY, t.AssignedDate, ISNULL(t.CompletedDate, GETDATE())) 
-        AS DaysOpen,
-
-    CASE
-        WHEN t.CompletedDate IS NULL 
-             AND t.ScheduledInstallDate < GETDATE()
-            THEN 'Overdue'
-        WHEN t.CompletedDate IS NOT NULL
-            THEN 'Completed'
-        ELSE 'On Track'
-    END AS SLAStatus
-
-FROM dbo.Task t
-INNER JOIN dbo.Technician tech
-    ON tech.TechnicianID = t.TechnicianID
-
-INNER JOIN dbo.Location loc
-    ON loc.LocationID = t.LocationID
-
-INNER JOIN dbo.Unit u
-    ON u.UnitID = t.UnitID
-
-WHERE t.TechnicianID = @TechnicianID
-ORDER BY
-    t.ScheduledInstallDate,
-    t.TaskStatus;
+    t.TechnicianName,
+    t.SkillLevel,
+    ta.TaskID,
+    tk.TaskType,
+    tk.ScheduledDate,
+    l.LocationName,
+    l.City,
+    ta.TaskStatus,
+    tk.EstimatedHours,
+    ta.AssignedDate,
+    ta.CompletedDate
+FROM TechnicianTask ta
+INNER JOIN Technician t ON ta.TechnicianID = t.TechnicianID
+INNER JOIN Task tk ON ta.TaskID = tk.TaskID
+INNER JOIN Location l ON tk.LocationID = l.LocationID
+WHERE ta.TechnicianID = @TechnicianID
+ORDER BY tk.ScheduledDate;

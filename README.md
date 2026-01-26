@@ -37,7 +37,7 @@ https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/insurance_rep
 - Schema  
   https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/schema.sql
 - Sample Data  
-  https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/sample_data.sql
+ https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/sql/insurance_reporting/sample_data.sql
 - Bordereaux & Commission Query  
   https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/bordereaux_commission.sql
 

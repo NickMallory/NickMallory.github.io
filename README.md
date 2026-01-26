@@ -112,14 +112,6 @@ https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/finance_repor
 3. Run the report queries to see real-world outputs
 4. Review comments for business logic explanations
 
-
-## 🧠 Key Skills Demonstrated
-- T-SQL (joins, aggregations, window functions)
-- SSRS-style parameterised queries
-- Financial & VAT reporting logic
-- Data validation and reconciliation
-- BI-focused query optimisation
-
 All data is fictional and created solely for portfolio demonstration purposes.
 
 
@@ -136,6 +128,3 @@ https://nickmallory.github.io
 - GitHub Pages (HTML/CSS)
 
 ---
-
-## 📌 Notes
-All data used in this portfolio is **fictional and anonymised** and is included solely for demonstration purposes.

@@ -198,70 +198,130 @@
 </section>
 
 <section id="projects">
-    <h3>BI Development Projects (SQL & Reporting)</h3>
+    <h3>BI Development Projects (SQL & Production Reporting)</h3>
 
+    <!-- PROJECT 1 -->
     <div class="role-section">
         <h4>1. Insurance Bordereaux & Commission Reporting</h4>
-        <p>
-            SQL Server reporting solution simulating insurer bordereaux submissions and commission calculations.
-            Focused on financial accuracy, reconciliation, and auditability.
+
+        <p><strong>Business Problem</strong><br>
+            Insurance finance teams require accurate bordereaux submissions and commission calculations
+            to reconcile premiums written against commissions payable across multiple insurers and policy types.
         </p>
+
+        <p><strong>Solution</strong><br>
+            I designed a SQL Server–based reporting solution using anonymised data to simulate real-world
+            insurance reporting. Business rules and commission logic are applied directly in SQL to ensure
+            accuracy, traceability, and audit readiness.
+        </p>
+
+        <p><strong>Technical Implementation</strong></p>
         <ul>
-            <li>
-                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/schema.sql" target="_blank">
-                    Database Schema
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/sql/insurance_reporting/sample_data.sql" target="_blank">
-                    Sample Data
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/bordereaux_commission.sql" target="_blank">
-                    Bordereaux & Commission Query
-                </a>
-            </li>
+            <li>Normalized schema for policies, premiums, agents, and commission rules</li>
+            <li>Parameter-driven reporting by insurer and reporting period</li>
+            <li>Commission calculations using configurable percentage rules</li>
+            <li>Reconciliation between premiums written and commissions payable</li>
+        </ul>
+
+        <p><strong>Intended Use</strong></p>
+        <ul>
+            <li>Monthly insurer bordereaux submissions</li>
+            <li>Finance reconciliation and audit review</li>
+            <li>SSRS deployment with date and insurer parameters</li>
+        </ul>
+
+        <p><strong>Outcome / Value</strong><br>
+            Enables reliable financial reconciliation while reducing manual effort and improving trust
+            in insurance reporting outputs.
+        </p>
+
+        <p><strong>Project Files</strong></p>
+        <ul>
+            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/schema.sql" target="_blank">Database Schema</a></li>
+            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/sample_data.sql" target="_blank">Sample Data</a></li>
+            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/bordereaux_commission.sql" target="_blank">Bordereaux & Commission Query</a></li>
         </ul>
     </div>
 
+    <!-- PROJECT 2 -->
     <div class="role-section">
         <h4>2. Technician Task Allocation & Utilisation Reporting</h4>
-        <p>
-            Operational reporting solution analysing technician workload, task assignments, and service delivery
-            across multiple locations. Designed for SSRS parameter-driven reporting.
+
+        <p><strong>Business Problem</strong><br>
+            Operations teams require visibility into technician workloads, task allocation,
+            and service coverage across multiple locations to ensure efficient scheduling.
         </p>
+
+        <p><strong>Solution</strong><br>
+            I developed a SQL-based operational reporting solution that tracks technician tasks,
+            installation jobs, and locations, enabling workload and utilisation analysis.
+        </p>
+
+        <p><strong>Technical Implementation</strong></p>
         <ul>
-            <li>
-                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/schema.sql" target="_blank">
-                    Database Schema
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/sample_data.sql" target="_blank">
-                    Sample Data
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/technician_task_report.sql" target="_blank">
-                    Technician Task Report Query
-                </a>
-            </li>
+            <li>Schema modelling technicians, tasks, job locations, and schedules</li>
+            <li>Parameter-driven reporting filtered by Technician ID and date range</li>
+            <li>Calculation of task counts and workload distribution</li>
+            <li>Designed for SSRS operational reporting</li>
+        </ul>
+
+        <p><strong>Intended Use</strong></p>
+        <ul>
+            <li>Daily and weekly technician task allocation</li>
+            <li>Operational workload monitoring</li>
+            <li>Management review of utilisation and coverage</li>
+        </ul>
+
+        <p><strong>Outcome / Value</strong><br>
+            Improves operational visibility and supports better scheduling decisions
+            by highlighting technician workload distribution.
+        </p>
+
+        <p><strong>Project Files</strong></p>
+        <ul>
+            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/schema.sql" target="_blank">Database Schema</a></li>
+            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/sample_data.sql" target="_blank">Sample Data</a></li>
+            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/technician_task_report.sql" target="_blank">Technician Task Report Query</a></li>
         </ul>
     </div>
 
+    <!-- PROJECT 3 -->
     <div class="role-section">
-        <h4>3. Client Invoice & Statement Reporting (VAT Calculations)</h4>
-        <p>
-            Financial reporting queries simulating customer invoicing and statement generation,
-            including VAT calculation, balance forward logic, and reconciliation checks.
+        <h4>3. Client Invoice & Statement Reporting (VAT)</h4>
+
+        <p><strong>Business Problem</strong><br>
+            Finance teams need accurate client invoices and statements that correctly calculate VAT,
+            balances, and transaction histories for billing and reconciliation.
         </p>
+
+        <p><strong>Solution</strong><br>
+            I created SQL reporting queries that simulate customer invoicing and statement generation,
+            applying VAT calculations and balance-forward logic directly in SQL.
+        </p>
+
+        <p><strong>Technical Implementation</strong></p>
         <ul>
-            <li>
-                <a href="https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/finance_reporting" target="_blank">
-                    View Project Files
-                </a>
-            </li>
+            <li>Transactional schema for customers, invoices, and financial entries</li>
+            <li>VAT calculations applied at line-item and invoice level</li>
+            <li>Statement logic including opening balance and running totals</li>
+            <li>Designed for financial reporting accuracy and auditability</li>
+        </ul>
+
+        <p><strong>Intended Use</strong></p>
+        <ul>
+            <li>Monthly client invoicing</li>
+            <li>Customer statement generation</li>
+            <li>Finance reconciliation and audit review</li>
+        </ul>
+
+        <p><strong>Outcome / Value</strong><br>
+            Ensures accurate, auditable billing outputs while reducing manual calculation
+            errors in financial reporting.
+        </p>
+
+        <p><strong>Project Files</strong></p>
+        <ul>
+            <li><a href="https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/customer_billing" target="_blank">View SQL Project Files</a></li>
         </ul>
     </div>
 </section>
@@ -296,6 +356,7 @@
 
 </body>
 </html>
+
 
 
 

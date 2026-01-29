@@ -152,6 +152,37 @@ nav {
             html {
                  scroll-behavior: smooth;
                  }
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    text-decoration: none;
+    color: #1f3a5f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.contact-icons img {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 8px;
+}
+
+.contact-icons span {
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.contact-icons a:hover {
+    transform: translateY(-5px);
+}
 
         }
     </style>
@@ -411,15 +442,36 @@ nav {
 
 <section id="contact">
     <h3>Contact</h3>
-    <p>
-        I am actively seeking opportunities as a Data Analyst or BI Developer and I am available for interviews.
+
+    <p style="margin-bottom: 30px;">
+        I am actively seeking opportunities as a <strong>Data Analyst</strong> or <strong>BI Developer</strong> and am available for interviews.
     </p>
-    <p>
-        📧 <strong>Email:</strong> mahlatsechiloane7@gmail.com<br>
-        💼 <strong>LinkedIn:</strong> www.linkedin.com/in/mahlatse-chiloane-329561229<br>
-        📂 <strong>GitHub:</strong> github.com/NickMallory
-    </p>
+
+    <div class="contact-icons">
+
+        <a href="mailto:mahlatsechiloane7@gmail.com" target="_blank" aria-label="Email">
+            <img src="assets/icons/email.svg" alt="Email">
+            <span>Email</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/mahlatse-chiloane-329561229" target="_blank" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+            <span>LinkedIn</span>
+        </a>
+
+        <a href="https://github.com/NickMallory" target="_blank" aria-label="GitHub">
+            <img src="assets/icons/github.svg" alt="GitHub">
+            <span>GitHub</span>
+        </a>
+
+        <a href="Mahlatse_Chiloane_BI_Developer_CV_FINAL.pdf" target="_blank" aria-label="Download CV">
+            <img src="assets/icons/cv.svg" alt="CV">
+            <span>CV</span>
+        </a>
+
+    </div>
 </section>
+
 
 <footer>
     <p>© 2026 Mahlatse Chiloane | Data Portfolio</p>
@@ -452,6 +504,7 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
+
 
 
 

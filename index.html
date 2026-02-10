@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahlatse Chiloane | BI Developer& Data Analyst </title>
+    <title>Mahlatse Chiloane | BI Developer & Data Analyst</title>
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
+
+        html {
+            scroll-behavior: smooth; /* smooth scrolling for whole site */
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
@@ -24,26 +32,22 @@
         header h1 {
             margin-bottom: 12px;
             font-size: 2.6em;
-            line-height: 1.2;
         }
 
         header h2 {
             font-weight: normal;
             font-size: 1.25em;
-            opacity: 0.95;
         }
 
-nav {
-    background: #162a44;
-    text-align: center;
-    padding: 14px;
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-
+        /* ===== Sticky Navigation ===== */
+        nav {
+            background: #162a44;
+            text-align: center;
+            padding: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
         nav a {
             color: #ffffff;
@@ -53,10 +57,12 @@ nav {
             font-size: 0.95em;
         }
 
-        nav a:hover {
+        nav a:hover,
+        nav a.active {
             text-decoration: underline;
         }
 
+        /* ===== Sections ===== */
         section {
             background: #ffffff;
             max-width: 1000px;
@@ -73,13 +79,8 @@ nav {
             margin-bottom: 25px;
         }
 
-        ul {
-            margin-left: 22px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
+        ul { margin-left: 22px; }
+        li { margin-bottom: 8px; }
 
         .role-section {
             background: #f0f3f9;
@@ -87,23 +88,6 @@ nav {
             border-left: 5px solid #1f3a5f;
             margin-bottom: 30px;
             border-radius: 4px;
-        }
-
-        .role-section h4 {
-            margin-top: 0;
-            color: #1f3a5f;
-        }
-
-        .project-link {
-            display: inline-block;
-            margin-top: 14px;
-            font-weight: bold;
-            color: #1f3a5f;
-            text-decoration: none;
-        }
-
-        .project-link:hover {
-            text-decoration: underline;
         }
 
         footer {
@@ -115,25 +99,52 @@ nav {
             font-size: 0.9em;
         }
 
-        /* Mobile Fixes */
+        /* ===== CONTACT SECTION ===== */
+
+        #contact {
+            text-align: center;
+        }
+
+        .contact-text {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .email { background: #ea4335; }
+        .linkedin { background: #0077b5; }
+        .github { background: #24292e; }
+
+        .icon:hover {
+            transform: translateY(-4px) scale(1.08);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+        }
+
+        /* ===== Mobile Responsive ===== */
         @media (max-width: 768px) {
-            header {
-                padding: 40px 15px;
-            }
 
-            header h1 {
-                font-size: 1.9em;
-                line-height: 1.25;
-            }
+            header { padding: 40px 15px; }
 
-            header h2 {
-                font-size: 1.05em;
-                margin-top: 10px;
-            }
-
-            nav {
-                padding: 10px;
-            }
+            header h1 { font-size: 1.9em; }
+            header h2 { font-size: 1.05em; }
 
             nav a {
                 display: inline-block;
@@ -145,110 +156,16 @@ nav {
                 margin: 20px 10px;
             }
 
-            section h3 {
-                font-size: 1.3em;
+            .contact-icons {
+                flex-wrap: wrap;
             }
-
-            html {
-                 scroll-behavior: smooth;
-                 }
-.contact-icons {
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.contact-icons a {
-    text-decoration: none;
-    color: #1f3a5f;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s ease;
-}
-
-.contact-icons img {
-    width: 42px;
-    height: 42px;
-    margin-bottom: 8px;
-}
-
-.contact-icons span {
-    font-size: 0.7em;
-    font-weight: bold;
-}
-
-.contact-icons a:hover {
-    transform: translateY(-5px);
-}
-
         }
-
-/* ===== CONTACT SECTION CLEAN FIX ===== */
-
-#contact {
-    background: #ffffff;
-    margin: 40px 0;
-    padding: 40px 60px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* Match other section heading style */
-#contact h3 {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* Description text */
-.contact-text {
-    text-align: center;
-    color: #555;
-    margin-bottom: 25px;
-}
-
-/* Icon row */
-.contact-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Circular buttons */
-.icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-
-    color: #ffffff;              /* ICON COLOR FIX */
-    text-decoration: none;
-
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Brand background colors */
-.email { background: #ea4335; }
-.linkedin { background: #0077b5; }
-.github { background: #24292e; }
-
-/* Hover animation */
-.icon:hover {
-    transform: translateY(-4px) scale(1.08);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-}
-
-
 
     </style>
 </head>
 
 <body>
+
 
 <header>
     <h1>Mahlatse Chiloane</h1>
@@ -555,6 +472,7 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
+
 
 
 

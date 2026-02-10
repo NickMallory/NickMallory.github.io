@@ -186,58 +186,63 @@ nav {
 
         }
 
-/* Make section same width/spacing as others */
-#contact {
-    padding: 40px 60px;
-}
+/* ===== CONTACT SECTION CLEAN FIX ===== */
 
-/* Match other section card styling */
-.contact-card {
+#contact {
     background: #ffffff;
-    padding: 40px;
+    margin: 40px 0;
+    padding: 40px 60px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    width: 100%;          /* FULL width */
-    max-width: none;      /* remove 500px limit */
 }
 
-/* Center text */
-.contact-card h3,
+/* Match other section heading style */
+#contact h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Description text */
 .contact-text {
     text-align: center;
+    color: #555;
+    margin-bottom: 25px;
 }
 
-/* Icons layout */
+/* Icon row */
 .contact-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px;
 }
 
-/* Circle buttons */
+/* Circular buttons */
 .icon {
-    width: 55px;
-    height: 55px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    color: white;              /* makes icon visible */
-    transition: 0.3s ease;
+
+    color: #ffffff;              /* ICON COLOR FIX */
+    text-decoration: none;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Brand colors */
+/* Brand background colors */
 .email { background: #ea4335; }
 .linkedin { background: #0077b5; }
-.github { background: #333; }
+.github { background: #24292e; }
 
 /* Hover animation */
 .icon:hover {
     transform: translateY(-4px) scale(1.08);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
 }
+
 
 
     </style>
@@ -494,31 +499,29 @@ nav {
         <li>Stakeholder Engagement & Requirements Analysis</li>
     </ul>
 </section>
-    
-<section id="contact">
-    <div class="contact-card">
-        <h3>Contact</h3>
+    <section id="contact">
+    <h3>Contact</h3>
 
-        <p class="contact-text">
-            I am actively seeking opportunities as a Data Analyst or BI Developer
-            and I am available for interviews.
-        </p>
+    <p class="contact-text">
+        I am actively seeking opportunities as a Data Analyst or BI Developer
+        and I am available for interviews.
+    </p>
 
-        <div class="contact-icons">
-            <a href="mailto:mahlatsechiloane7@gmail.com" class="icon email" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
+    <div class="contact-icons">
+        <a href="mailto:mahlatsechiloane7@gmail.com" class="icon email">
+            <i class="fas fa-envelope"></i>
+        </a>
 
-            <a href="https://www.linkedin.com/in/mahlatse-chiloane-329561229" target="_blank" class="icon linkedin" title="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
+        <a href="https://www.linkedin.com/in/mahlatse-chiloane-329561229" target="_blank" class="icon linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
 
-            <a href="https://github.com/NickMallory" target="_blank" class="icon github" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
+        <a href="https://github.com/NickMallory" target="_blank" class="icon github">
+            <i class="fab fa-github"></i>
+        </a>
     </div>
 </section>
+
 
 
 <footer>
@@ -552,6 +555,7 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
+
 
 
 

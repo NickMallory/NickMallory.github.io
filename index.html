@@ -185,6 +185,70 @@ nav {
 }
 
         }
+
+        /* Section spacing */
+#contact {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background: #f5f7fa;
+}
+
+/* Card layout */
+.contact-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Heading */
+.contact-card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Description text */
+.contact-text {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Icon container */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Round icon buttons */
+.icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Individual brand colors */
+.email { background: #ea4335; }
+.linkedin { background: #0077b5; }
+.github { background: #333; }
+
+/* Hover animation */
+.icon:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
     </style>
 </head>
 
@@ -439,23 +503,30 @@ nav {
         <li>Stakeholder Engagement & Requirements Analysis</li>
     </ul>
 </section>
-
+    
 <section id="contact">
-    <h3>Contact</h3>
+    <div class="contact-card">
+        <h3>Contact</h3>
 
-    <p style="margin-bottom: 30px;">
-        I am actively seeking opportunities as a <strong>Data Analyst</strong> or <strong>BI Developer</strong> and am available for interviews.
-    </p>
-<section id="contact">
-    <h3>Contact</h3>
-    <p>
-        I am actively seeking opportunities as a Data Analyst or BI Developer and I am available for interviews.
-    </p>
-    <p>
-        📧 <strong>Email:</strong> mahlatsechiloane7@gmail.com<br>
-        💼 <strong>LinkedIn:</strong> www.linkedin.com/in/mahlatse-chiloane-329561229<br>
-        📂 <strong>GitHub:</strong> github.com/NickMallory
-    </p>
+        <p class="contact-text">
+            I am actively seeking opportunities as a Data Analyst or BI Developer
+            and I am available for interviews.
+        </p>
+
+        <div class="contact-icons">
+            <a href="mailto:mahlatsechiloane7@gmail.com" class="icon email" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mahlatse-chiloane-329561229" target="_blank" class="icon linkedin" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://github.com/NickMallory" target="_blank" class="icon github" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
 </section>
 
 
@@ -490,6 +561,7 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
+
 
 
 

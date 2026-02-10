@@ -161,6 +161,20 @@
             }
         }
 
+        /* ===== Scroll Fade Animation ===== */
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
     </style>
 </head>
 
@@ -180,7 +194,7 @@
     <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
+<section id="about" class="fade-section">
     <h3>About Me</h3>
     <p>
         I am a BI Developer and a Data Analyst with over three years of hands-on experience working in production SQL Server environments. I specialise in delivering accurate, business-critical reporting and analysis that supports operational, financial, and strategic decision-making.
@@ -190,7 +204,7 @@
     </p>
 </section>
 
-<section id="experience">
+<section id="experience" class="fade-section">
     <h3>Professional Experience</h3>
 
     <div class="role-section">
@@ -216,7 +230,7 @@
     </div>
 </section>
 
-<section id="projects">
+<section id="projects" class="fade-section">
     <h3>BI Development Projects (SQL & Production Reporting)</h3>
 
     <!-- PROJECT 1 -->
@@ -345,7 +359,7 @@
     </div>
 </section>
 
-    <section id="sql-portfolio">
+    <section id="sql-portfolio" class="fade-section">
     <h3>Technical SQL & Reporting Portfolio</h3>
 
     <p>
@@ -405,7 +419,7 @@
 </section>
 
 
-<section id="skills">
+<section id="skills" class="fade-section">
     <h3>Core Skills</h3>
     <ul>
         <li>SQL Server (T-SQL, Views, Stored Procedures, Query Optimisation)</li>
@@ -416,7 +430,7 @@
         <li>Stakeholder Engagement & Requirements Analysis</li>
     </ul>
 </section>
-    <section id="contact">
+   <section id="contact" class="fade-section">
     <h3>Contact</h3>
 
     <p class="contact-text">
@@ -468,10 +482,23 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+        const fadeSections = document.querySelectorAll(".fade-section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+}, { threshold: 0.15 });
+
+fadeSections.forEach(section => observer.observe(section));
 </script>
 
 </body>
 </html>
+
 
 
 

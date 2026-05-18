@@ -1,172 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahlatse Chiloane | BI Developer & Data Analyst</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahlatse Chiloane | BI Developer & Data Analyst</title>
 
-    <!-- Font Awesome (for icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
+<style>
 
-        html {
-            scroll-behavior: smooth; /* smooth scrolling for whole site */
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            background-color: #f5f7fb;
-            color: #2c2c2c;
-            line-height: 1.6;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        header {
-            background: #1f3a5f;
-            color: #ffffff;
-            padding: 70px 20px;
-            text-align: center;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    line-height: 1.7;
+}
 
-        header h1 {
-            margin-bottom: 12px;
-            font-size: 2.6em;
-        }
+/* HERO */
+header {
+    background: linear-gradient(135deg, #102542, #1f3a5f);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
 
-        header h2 {
-            font-weight: normal;
-            font-size: 1.25em;
-        }
+header h1 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+}
 
-        /* ===== Sticky Navigation ===== */
-        nav {
-            background: #162a44;
-            text-align: center;
-            padding: 14px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+header p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 1.15rem;
+    opacity: 0.95;
+}
 
-        nav a {
-            color: #ffffff;
-            margin: 0 18px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.95em;
-        }
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
 
-        nav a:hover,
-        nav a.active {
-            text-decoration: underline;
-        }
+.hero-btn {
+    padding: 14px 26px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
 
-        /* ===== Sections ===== */
-        section {
-            background: #ffffff;
-            max-width: 1000px;
-            margin: 35px auto;
-            padding: 45px;
-            border-radius: 8px;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.06);
-        }
+.hero-primary {
+    background: white;
+    color: #102542;
+}
 
-        section h3 {
-            color: #1f3a5f;
-            border-bottom: 3px solid #1f3a5f;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-        }
+.hero-secondary {
+    border: 2px solid white;
+    color: white;
+}
 
-        ul { margin-left: 22px; }
-        li { margin-bottom: 8px; }
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
 
-        .role-section {
-            background: #f0f3f9;
-            padding: 30px;
-            border-left: 5px solid #1f3a5f;
-            margin-bottom: 30px;
-            border-radius: 4px;
-        }
+/* NAV */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0f172a;
+    padding: 18px;
+    text-align: center;
+}
 
-        footer {
-            background: #162a44;
-            color: #ffffff;
-            text-align: center;
-            padding: 22px;
-            margin-top: 50px;
-            font-size: 0.9em;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
 
-        /* ===== CONTACT SECTION ===== */
+nav a:hover {
+    color: #93c5fd;
+}
 
-        #contact {
-            text-align: left;
-        }
+/* SECTIONS */
+section {
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 0 20px;
+}
 
-        .contact-text {
-            color: #555;
-            margin-bottom: 25px;
-        }
+.section-title {
+    font-size: 2rem;
+    color: #102542;
+    margin-bottom: 35px;
+    text-align: center;
+}
 
-        .contact-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+/* ABOUT */
+.about-card {
+    background: white;
+    border-radius: 18px;
+    padding: 45px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
-        .icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            color: #ffffff;
-            text-decoration: none;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
+/* STATS */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
 
-        .email { background: #ea4335; }
-        .linkedin { background: #0077b5; }
-        .github { background: #24292e; }
+.stat-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
 
-        .icon:hover {
-            transform: translateY(-4px) scale(1.08);
-            box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-        }
+.stat-card:hover {
+    transform: translateY(-6px);
+}
 
-        /* ===== Mobile Responsive ===== */
-        @media (max-width: 768px) {
+.stat-card h2 {
+    color: #1d4ed8;
+    font-size: 2.5rem;
+}
 
-            header { padding: 40px 15px; }
+/* SKILLS */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
 
-            header h1 { font-size: 1.9em; }
-            header h2 { font-size: 1.05em; }
+.skills-grid span {
+    background: #102542;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 40px;
+    font-size: 0.95rem;
+}
 
-            nav a {
-                display: inline-block;
-                margin: 8px 10px;
-            }
+/* PROJECTS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+}
 
-            section {
-                padding: 25px 20px;
-                margin: 20px 10px;
-            }
+.project-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
 
-            .contact-icons {
-                flex-wrap: wrap;
-            }
-        }
+.project-card:hover {
+    transform: translateY(-8px);
+}
 
-        /* ===== Scroll Fade Animation ===== */
+.project-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
 
+.project-content {
+    padding: 28px;
+}
+
+.project-content h3 {
+    margin-bottom: 16px;
+    color: #102542;
+}
+
+.project-content p {
+    margin-bottom: 18px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.tech-stack span {
+    background: #e2e8f0;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.project-links a {
+    text-decoration: none;
+    background: #1d4ed8;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+/* SCREENSHOT GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 22px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* CONTACT */
+.contact-card {
+    background: white;
+    padding: 50px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.contact-icons a {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+
+.contact-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.email {
+    background: #ea4335;
+}
+
+.linkedin {
+    background: #0077b5;
+}
+
+.github {
+    background: #24292e;
+}
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 80px;
+}
+
+/* ANIMATIONS */
 .fade-section {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
 }
 
 .fade-section.visible {
@@ -174,348 +311,277 @@
     transform: translateY(0);
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
 
-    </style>
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .about-card,
+    .contact-card {
+        padding: 30px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-
 <header>
     <h1>Mahlatse Chiloane</h1>
-    <h2>BI Developer& Data Analyst | SQL Server, SSRS & Business Reporting</h2>
+
+    <p>
+        BI Developer & Data Analyst specialising in SQL Server, SSRS,
+        financial reporting, operational analytics, and business intelligence solutions.
+        Experienced in delivering production-grade reporting systems across insurance,
+        finance, and operational environments.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="#projects" class="hero-btn hero-primary">View Projects</a>
+        <a href="CV.pdf" class="hero-btn hero-secondary">Download CV</a>
+    </div>
 </header>
 
 <nav>
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
+    <a href="#stats">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#gallery">Screenshots</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <section id="about" class="fade-section">
-    <h3>About Me</h3>
-    <p>
-        I am a BI Developer and a Data Analyst with over three years of hands-on experience working in production SQL Server environments. I specialise in delivering accurate, business-critical reporting and analysis that supports operational, financial, and strategic decision-making.
-    </p>
-    <p>
-        I work extensively with confidential data across insurance, finance, education, and operational domains. I take ownership of solutions end-to-end — from understanding business requirements to building, validating, optimising, and delivering trusted reporting outputs.
-    </p>
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-card">
+        <p>
+            I am a BI Developer and Data Analyst with over three years of production experience
+            delivering SQL Server–based reporting, financial analysis, and operational BI solutions.
+            My work focuses on building accurate, auditable, and business-aligned reporting systems
+            that support strategic decision-making.
+        </p>
+
+        <br>
+
+        <p>
+            I specialise in T-SQL development, SSRS reporting, query optimisation, data validation,
+            commission reporting, bordereaux reporting, invoicing systems, and operational analytics.
+            I take ownership of the full reporting lifecycle — from requirements gathering and
+            SQL development through to optimisation, validation, and deployment.
+        </p>
+    </div>
 </section>
 
-<section id="experience" class="fade-section">
-    <h3>Professional Experience</h3>
+<section id="stats" class="fade-section">
+    <h2 class="section-title">Experience Snapshot</h2>
 
-    <div class="role-section">
-        <h4>BI Developer Experience</h4>
-        <ul>
-            <li>Designed and delivered insurer-aligned bordereaux reports meeting regulatory and business requirements</li>
-            <li>Developed complex commission calculation reports applying detailed, multi-level business rules</li>
-            <li>Built invoice and statement reports per client, ensuring financial accuracy and reconciliation</li>
-            <li>Created operational SSRS reports for technician scheduling, utilisation, and performance</li>
-            <li>Optimised SQL queries, views, and stored procedures for performance and reliability</li>
-        </ul>
-    </div>
+    <div class="stats-grid">
 
-    <div class="role-section">
-        <h4>Data Analyst Experience</h4>
-        <ul>
-            <li>Performed ad-hoc and recurring analysis on insurance, commission, and operational datasets</li>
-            <li>Identified trends, KPIs, and performance indicators to support management decisions</li>
-            <li>Analysed technician workload distribution to highlight efficiency and capacity gaps</li>
-            <li>Produced learner performance analysis reports across subjects and academic periods</li>
-            <li>Validated, reconciled, and quality-checked datasets to ensure reporting accuracy</li>
-        </ul>
+        <div class="stat-card">
+            <h2>3+</h2>
+            <p>Years Production BI Experience</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>SQL</h2>
+            <p>SSRS • T-SQL • Reporting</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>20+</h2>
+            <p>Business Reports Delivered</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>BI</h2>
+            <p>Insurance • Finance • Operations</p>
+        </div>
+
     </div>
 </section>
 
 <section id="projects" class="fade-section">
-    <h3>BI Development Projects (SQL & Production Reporting)</h3>
+    <h2 class="section-title">Featured BI Projects</h2>
 
-    <!-- PROJECT 1 -->
-    <div class="role-section">
-        <h4>1. Insurance Bordereaux & Commission Reporting</h4>
+    <div class="projects-grid">
 
-        <p><strong>Business Problem</strong><br>
-            Insurance finance teams require accurate bordereaux submissions and commission calculations
-            to reconcile premiums written against commissions payable across multiple insurers and policy types.
-        </p>
+        <div class="project-card">
+            <img src="images/bordereaux-report.jpg" alt="Insurance Reporting Dashboard">
 
-        <p><strong>Solution</strong><br>
-            I designed a SQL Server–based reporting solution using anonymised data to simulate real-world
-            insurance reporting. Business rules and commission logic are applied directly in SQL to ensure
-            accuracy, traceability, and audit readiness.
-        </p>
+            <div class="project-content">
+                <h3>Insurance Bordereaux & Commission Reporting</h3>
 
-        <p><strong>Technical Implementation</strong></p>
-        <ul>
-            <li>Normalized schema for policies, premiums, agents, and commission rules</li>
-            <li>Parameter-driven reporting by insurer and reporting period</li>
-            <li>Commission calculations using configurable percentage rules</li>
-            <li>Reconciliation between premiums written and commissions payable</li>
-        </ul>
+                <p>
+                    SQL Server and SSRS reporting solution for insurer reconciliation,
+                    commission calculations, and audit-ready bordereaux submissions.
+                </p>
 
-        <p><strong>Intended Use</strong></p>
-        <ul>
-            <li>Monthly insurer bordereaux submissions</li>
-            <li>Finance reconciliation and audit review</li>
-            <li>SSRS deployment with date and insurer parameters</li>
-        </ul>
+                <div class="tech-stack">
+                    <span>SQL Server</span>
+                    <span>T-SQL</span>
+                    <span>SSRS</span>
+                    <span>Finance Reporting</span>
+                </div>
 
-        <p><strong>Outcome / Value</strong><br>
-            Enables reliable financial reconciliation while reducing manual effort and improving trust
-            in insurance reporting outputs.
-        </p>
+                <div class="project-links">
+                    <a href="https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/insurance_reporting" target="_blank">View SQL Project</a>
+                </div>
+            </div>
+        </div>
 
-        <p><strong>Project Files</strong></p>
-        <ul>
-            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/schema.sql" target="_blank">Database Schema</a></li>
-            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/sql/insurance_reporting/sample_data.sql" target="_blank">Sample Data</a></li>
-            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/insurance_reporting/bordereaux_commission.sql" target="_blank">Bordereaux & Commission Query</a></li>
-        </ul>
-    </div>
+        <div class="project-card">
+            <img src="images/technician-dashboard.jpg" alt="Technician Dashboard">
 
-    <!-- PROJECT 2 -->
-    <div class="role-section">
-        <h4>2. Technician Task Allocation & Utilisation Reporting</h4>
+            <div class="project-content">
+                <h3>Technician Scheduling & Utilisation Reporting</h3>
 
-        <p><strong>Business Problem</strong><br>
-            Operations teams require visibility into technician workloads, task allocation,
-            and service coverage across multiple locations to ensure efficient scheduling.
-        </p>
+                <p>
+                    Operational reporting solution tracking technician workload,
+                    task allocation, scheduling efficiency, and utilisation metrics.
+                </p>
 
-        <p><strong>Solution</strong><br>
-            I developed a SQL-based operational reporting solution that tracks technician tasks,
-            installation jobs, and locations, enabling workload and utilisation analysis.
-        </p>
+                <div class="tech-stack">
+                    <span>SQL Server</span>
+                    <span>Operational BI</span>
+                    <span>SSRS</span>
+                    <span>Analytics</span>
+                </div>
 
-        <p><strong>Technical Implementation</strong></p>
-        <ul>
-            <li>Schema modelling technicians, tasks, job locations, and schedules</li>
-            <li>Parameter-driven reporting filtered by Technician ID and date range</li>
-            <li>Calculation of task counts and workload distribution</li>
-            <li>Designed for SSRS operational reporting</li>
-        </ul>
+                <div class="project-links">
+                    <a href="https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/technician_reporting" target="_blank">View SQL Project</a>
+                </div>
+            </div>
+        </div>
 
-        <p><strong>Intended Use</strong></p>
-        <ul>
-            <li>Daily and weekly technician task allocation</li>
-            <li>Operational workload monitoring</li>
-            <li>Management review of utilisation and coverage</li>
-        </ul>
+        <div class="project-card">
+            <img src="images/finance-report.jpg" alt="Financial Reporting">
 
-        <p><strong>Outcome / Value</strong><br>
-            Improves operational visibility and supports better scheduling decisions
-            by highlighting technician workload distribution.
-        </p>
+            <div class="project-content">
+                <h3>Client Invoice & Statement Reporting</h3>
 
-        <p><strong>Project Files</strong></p>
-        <ul>
-            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/schema.sql" target="_blank">Database Schema</a></li>
-            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/sample_data.sql" target="_blank">Sample Data</a></li>
-            <li><a href="https://github.com/NickMallory/NickMallory.github.io/blob/main/sql/technician_reporting/technician_task_report.sql" target="_blank">Technician Task Report Query</a></li>
-        </ul>
-    </div>
+                <p>
+                    Financial reporting solution for VAT calculations,
+                    invoice generation, customer statements, and reconciliation.
+                </p>
 
-    <!-- PROJECT 3 -->
-    <div class="role-section">
-        <h4>3. Client Invoice & Statement Reporting (VAT)</h4>
+                <div class="tech-stack">
+                    <span>SQL Server</span>
+                    <span>Financial BI</span>
+                    <span>VAT Reporting</span>
+                    <span>SSRS</span>
+                </div>
 
-        <p><strong>Business Problem</strong><br>
-            Finance teams need accurate client invoices and statements that correctly calculate VAT,
-            balances, and transaction histories for billing and reconciliation.
-        </p>
+                <div class="project-links">
+                    <a href="https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/finance_reporting" target="_blank">View SQL Project</a>
+                </div>
+            </div>
+        </div>
 
-        <p><strong>Solution</strong><br>
-            I created SQL reporting queries that simulate customer invoicing and statement generation,
-            applying VAT calculations and balance-forward logic directly in SQL.
-        </p>
-
-        <p><strong>Technical Implementation</strong></p>
-        <ul>
-            <li>Transactional schema for customers, invoices, and financial entries</li>
-            <li>VAT calculations applied at line-item and invoice level</li>
-            <li>Statement logic including opening balance and running totals</li>
-            <li>Designed for financial reporting accuracy and auditability</li>
-        </ul>
-
-        <p><strong>Intended Use</strong></p>
-        <ul>
-            <li>Monthly client invoicing</li>
-            <li>Customer statement generation</li>
-            <li>Finance reconciliation and audit review</li>
-        </ul>
-
-        <p><strong>Outcome / Value</strong><br>
-            Ensures accurate, auditable billing outputs while reducing manual calculation
-            errors in financial reporting.
-        </p>
-
-        <p><strong>Project Files</strong></p>
-        <ul>
-            <li><a href="https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/finance_reporting" target="_blank">View SQL Project Files</a></li>
-        </ul>
     </div>
 </section>
 
-    <section id="sql-portfolio" class="fade-section">
-    <h3>Technical SQL & Reporting Portfolio</h3>
+<section id="gallery" class="fade-section">
+    <h2 class="section-title">Reporting & Dashboard Screenshots</h2>
 
-    <p>
-        Below are anonymised, production-style SQL examples demonstrating how I design schemas,
-        prepare data, and build reporting logic for financial, insurance, and operational BI use cases.
-        All examples use safe sample data and mirror real-world business reporting scenarios.
-    </p>
+    <div class="gallery-grid">
 
-    <div class="role-section">
-        <h4>1. Insurance Bordereaux & Commission Reporting</h4>
-        <ul>
-            <li>Simulates insurer bordereaux reporting with premium and commission calculations</li>
-            <li>Applies validation, reconciliation, and audit-friendly logic</li>
-            <li>Demonstrates financial BI and regulatory-style reporting</li>
-        </ul>
-        <p>
-                🔗 <a href="https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/insurance_reporting" target="_blank">
-                View SQL Scripts (Schema, Sample Data & Queries)
-            </a>
-        </p>
+        <img src="images/report1.jpg" alt="SSRS Report Screenshot">
+        <img src="images/report2.jpg" alt="Dashboard Screenshot">
+        <img src="images/report3.jpg" alt="SQL Reporting Screenshot">
+        <img src="images/report4.jpg" alt="Financial Dashboard Screenshot">
+        <img src="images/report5.jpg" alt="Commission Reporting Screenshot">
+        <img src="images/report6.jpg" alt="Operational Dashboard Screenshot">
+
     </div>
-
-    <div class="role-section">
-        <h4>2. Technician Scheduling & Utilisation Report</h4>
-        <ul>
-            <li>Operational BI example tracking technician task assignments</li>
-            <li>Filters workload by TechnicianID</li>
-            <li>Calculates daily task counts and utilisation metrics</li>
-            <li>Designed for SSRS-style operational reporting</li>
-        </ul>
-        <p>
-            🔗 <a href="https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/technician_reporting" target="_blank">
-                View SQL Scripts (Schema, Sample Data & Queries)
-            </a>
-        </p>
-    </div>
-
-    <div class="role-section">
-        <h4>3. Customer Invoice & Statement Reporting (VAT Inclusive)</h4>
-        <ul>
-            <li>Financial reporting example using transaction-level data</li>
-            <li>Calculates VAT, totals, and balance-forward amounts</li>
-            <li>Supports invoice and customer statement-style outputs</li>
-            <li>Designed for month-end financial reconciliation</li>
-        </ul>
-        <p>
-            🔗 <a href="https://github.com/NickMallory/NickMallory.github.io/tree/main/sql/finance_reporting" target="_blank">
-                View SQL Scripts (Schema, Sample Data & Queries)
-            </a>
-        </p>
-    </div>
-
-    <p>
-        These examples reflect my approach to building scalable, auditable,
-        and business-aligned SQL solutions suitable for production BI environments.
-    </p>
 </section>
-
 
 <section id="skills" class="fade-section">
-    <h3>Core Skills</h3>
-    <ul>
-        <li>SQL Server (T-SQL, Views, Stored Procedures, Query Optimisation)</li>
-        <li>SSRS Report Development, Deployment & Maintenance</li>
-        <li>Data Analysis, Validation & Reconciliation</li>
-        <li>Financial, Insurance & Operational Reporting</li>
-        <li>KPI Development & Business Insight Generation</li>
-        <li>Stakeholder Engagement & Requirements Analysis</li>
-    </ul>
-</section>
-   <section id="contact" class="fade-section">
-    <h3>Contact</h3>
+    <h2 class="section-title">Core Technical Skills</h2>
 
-    <p class="contact-text">
-        I am actively seeking opportunities as a Data Analyst or BI Developer
-        and I am available for interviews.
-    </p>
-
-    <div class="contact-icons">
-        <a href="mailto:mahlatsechiloane7@gmail.com" class="icon email">
-            <i class="fas fa-envelope"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/mahlatse-chiloane-329561229" target="_blank" class="icon linkedin">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-
-        <a href="https://github.com/NickMallory" target="_blank" class="icon github">
-            <i class="fab fa-github"></i>
-        </a>
+    <div class="skills-grid">
+        <span>SQL Server</span>
+        <span>T-SQL</span>
+        <span>SSRS</span>
+        <span>Query Optimisation</span>
+        <span>Stored Procedures</span>
+        <span>Views</span>
+        <span>Financial Reporting</span>
+        <span>Insurance Reporting</span>
+        <span>Operational Analytics</span>
+        <span>KPI Development</span>
+        <span>Data Validation</span>
+        <span>Data Analysis</span>
+        <span>Business Intelligence</span>
+        <span>Stakeholder Engagement</span>
+        <span>Requirements Analysis</span>
     </div>
 </section>
 
+<section id="contact" class="fade-section">
+    <h2 class="section-title">Contact</h2>
 
+    <div class="contact-card">
+
+        <p>
+            I am actively seeking opportunities as a BI Developer,
+            Data Analyst, Reporting Analyst, or SQL Developer.
+        </p>
+
+        <div class="contact-icons">
+
+            <a href="mailto:mahlatsechiloane7@gmail.com" class="email">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mahlatse-chiloane-329561229"
+               target="_blank"
+               class="linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://github.com/NickMallory"
+               target="_blank"
+               class="github">
+                <i class="fab fa-github"></i>
+            </a>
+
+        </div>
+
+    </div>
+</section>
 
 <footer>
-    <p>© 2026 Mahlatse Chiloane | Data Portfolio</p>
+    <p>© 2026 Mahlatse Chiloane | BI Developer Portfolio</p>
 </footer>
 
-    <script>
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
+<script>
 
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
-
-        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
-});
-
-        const fadeSections = document.querySelectorAll(".fade-section");
+const fadeSections = document.querySelectorAll('.fade-section');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            entry.target.classList.add('visible');
         }
     });
 }, { threshold: 0.15 });
 
-fadeSections.forEach(section => observer.observe(section));
+fadeSections.forEach(section => {
+    observer.observe(section);
+});
+
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

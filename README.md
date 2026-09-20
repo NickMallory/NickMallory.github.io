@@ -1,4 +1,4 @@
-# Mahlatse Chiloane –  BI Developer& Data Analyst
+# Mahlatse Chiloane –  Data Solutions Engineer | Data & BI Developer | SQL & Analytics
 
 Welcome to my portfolio repository.
 
